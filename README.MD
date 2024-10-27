@@ -5,7 +5,7 @@ Prerequisites
 #### 2) An Azure account with appropriate permissions.
 #### 3) oxer.zip template downloaded.
 
-##Steps to Setup
+### Steps to be followed
 
 ### 1. Ensure You're Logged Into Azure
 
