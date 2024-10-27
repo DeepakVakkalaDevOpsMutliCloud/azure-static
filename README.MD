@@ -1,3 +1,5 @@
+markdown
+Copy code
 # Azure Blob Storage Static Website Setup
 
 This document outlines the steps to configure a static website on Azure Blob Storage using the provided template files from `oxer.zip`.
@@ -58,4 +60,4 @@ az storage account show --name ltdeepstoredemo --query "primaryEndpoints.web" --
 Open the retrieved URL in your browser to view the deployed site.
 
 Conclusion
-You have successfully set up a static website on Azure Blob Storage using the oxer template
+You have successfully set up a static website on Azure Blob Storage using the oxer template.
