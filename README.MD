@@ -14,11 +14,14 @@ Log into your Azure account using the following command:
 az login
 ```
 
-### 2. Create a Resource Group (if not already done)
+### 2. Create a Resource Group 
 Create a new resource group to hold your storage account:
 ```bash
-az group create --name storagedemo --location eastus
+az group create \
+    --name "storagedemo" \
+    --location "eastus"
 ```
+![Preview](MY-images/img1.png)
 
 ### 3. Create a Storage Account
 Create a new storage account with the desired configurations:
