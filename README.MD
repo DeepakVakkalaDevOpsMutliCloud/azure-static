@@ -1,9 +1,9 @@
 # Azure Blob Storage Static Website Setup
 This document outlines the steps to configure a static website on Azure Blob Storage using the provided template files from oxer.zip
 Prerequisites
-### 1) Azure CLI installed on your machine.
-### 2) An Azure account with appropriate permissions.
-### 3) oxer.zip template downloaded.
+#### 1) Azure CLI installed on your machine.
+#### 2) An Azure account with appropriate permissions.
+#### 3) oxer.zip template downloaded.
 
 ##Steps to Setup
 
