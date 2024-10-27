@@ -26,34 +26,61 @@ az group create \
 ### 3. Create a Storage Account
 Create a new storage account with the desired configurations:
 ```bash
-az storage account create --name ltdeepstoredemo --resource-group storagedemo --location eastus --sku Standard_RAGRS --kind StorageV2 --min-tls-version TLS1_2 --allow-blob-public-access true
+az storage account create \
+  --name ltdeepstoredemo \
+  --resource-group storagedemo \
+  --location eastus \
+  --sku Standard_RAGRS \
+  --kind StorageV2 \
+  --min-tls-version TLS1_2 \
+  --allow-blob-public-access true
 ```
+![Preview](MY-images/img2.png)
 
 ### 4. Create a Storage Container
 Create a container in the storage account where your blobs will be stored:
 ```bash
-az storage container create --name \$web --account-name ltdeepstoredemo
+az storage container create \
+  --name \$web \
+  --account-name ltdeepstoredemo
 ```
+![Preview](MY-images/img3.png)
+
 ### 5. Enable Static Website Hosting
 Set up the storage account to serve as a static website:
 ```bash
-az storage blob service-properties update --account-name ltdeepstoredemo --static-website --index-document index.html --404-document 404.html
+az storage blob service-properties update \
+  --account-name ltdeepstoredemo \
+  --static-website true \
+  --index-document index.html \
+  --404-document 404.html
 ```
 
 ### 6. Upload Template Files
 Navigate to the template directory and upload the files to the $web container:
 ```bash
-az storage blob upload-batch --destination '$web' --source . --account-name ltdeepstoredemo
+az storage blob upload-batch \
+  --destination '$web' \
+  --source . \
+  --account-name ltdeepstoredemo
 ```
+![Preview](MY-images/img4.png)
 
 ### 7. Get the Static Website URL
 Retrieve the URL of the static website:
 ```bash
-az storage account show --name ltdeepstoredemo --query "primaryEndpoints.web" --output tsv
+staticWebsiteUrl=$(az storage account show \
+  --name ltdeepstoredemo \
+  --query "primaryEndpoints.web" \
+  --output tsv)
 ```
 
 ### 8. Access the Website
 Open the retrieved URL in your browser to view the deployed site.
+```bash
+ echo "Static Website URL: $staticWebsiteUrl"
+```
+![Preview](MY-images/img5.png)
 
-Conclusion
+## Conclusion
 You have successfully set up a static website on Azure Blob Storage using the oxer template.
