@@ -19,6 +19,7 @@ After downloading `oxer.zip`, extract its contents:
 ```bash
 unzip oxer.zip -d oxer-template
 cd oxer-template
+```
 2. Azure CLI Steps
 2.1 Ensure You're Logged Into Azure
 Log into your Azure account using the following command:
