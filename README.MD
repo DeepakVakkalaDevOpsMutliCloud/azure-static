@@ -23,6 +23,11 @@ Create a new storage account with the desired configurations:
 ```bash
 az storage account create --name ltdeepstoredemo --resource-group storagedemo --location eastus --sku Standard_RAGRS --kind StorageV2 --min-tls-version TLS1_2 --allow-blob-public-access true
 ```
+2.4 Create a Storage Container
+Create a container in the storage account where your blobs will be stored:
+```bash
+az storage container create --name \$web --account-name ltdeepstoredemo
+```
 3. Enable Static Website Hosting
 Set up the storage account to serve as a static website:
 ```bash
